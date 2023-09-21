@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maids Finder Registration</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style2.css') }}"
+    />
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="registration-container">
+      <div class="registration-form">
+        <h2>Registration</h2>
+    <form id="registration-form" method="post" action="{{ url_for('registration', msg=msg) }}" enctype="multipart/form-data">
+         
+        <div class="form-group">
+            <input type="text" name="fname" id="first-name" placeholder="First Name">
+            <p id="first-name-error" class="error-message"></p>
+            <input type="text" name="lname" id="last-name" placeholder="Last Name">
+            <p id="last-name-error" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+            <p id="phone-error" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <p id="password-error" class="error-message"></p>
+            <input type="password" id="confirm-password" placeholder="Confirm Password">
+            <p id="confirm-password-error" class="error-message"></p>
+        </div>
+        <!-- Profile picture upload -->
+        <label for="photo">
+          <i class="fas fa-portrait"></i>
+        </label>
+        <input type="file" name="photo" accept="image/*">
+        <div class="msg">{{ msg }}</div>
+        <input type="submit" value="Register">
+    </form>
+        <div class="actions">
+          <a href="#" id="forgot-password">Forgot Password?</a>
+          <span 
+            >Already have an account?
+            <a href="Login.html" id="sign-in">Sign In</a></span
+          >
+        </div>
+      </div>
+    </div>
+    <!--script src="{{ url_for('static', filename='js/script2.js') }}"></script-->
+  </body>
+</html>

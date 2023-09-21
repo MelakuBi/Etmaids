@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <!-- Mirrored from html.rudhisasmito.com/laundryes/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Aug 2023 21:20:16 GMT -->
+  <head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8" />
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us</title>
+    <meta
+      name="description"
+      content="Laundryes - Laundry Business Html Template. It is built using bootstrap 3.3.2 framework, works totally responsive, easy to customise, well commented codes and seo friendly."
+    />
+    <meta
+      name="keywords"
+      content="laundry, multipage, business, clean, bootstrap"
+    />
+    <meta name="author" content="rudhisasmito.com" />
+
+    <!-- ==============================================
+	Favicons
+	=============================================== -->
+
+    <!-- ==============================================
+	CSS
+	=============================================== -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+
+    <!-- ==============================================
+	Google Fonts
+	=============================================== -->
+    <link
+      href="http://fonts.googleapis.com/css?family=Raleway:400,700,900"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+
+    <script src="{{ url_for('static', filename='js/modernizr.min.js') }}"></script>
+  </head>
+
+  <body>
+    <!-- Load page -->
+    <div class="animationload">
+      <div class="loader"></div>
+    </div>
+
+    <!-- NAVBAR SECTION -->
+    <div class="navbar navbar-main navbar-fixed-top">
+      <div class="header-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+              <div class="info">
+                <div class="info-item">
+                  <span class="fa fa-phone"></span> Phone +251 911000000--
+                </div>
+                <div class="info-item">
+                  <span class="fa fa-envelope-o"></span>
+                  <a href="#" title="">Email ETmaids@gmail.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+              <div class="top-sosmed pull-right">
+                <a href="#" title=""><span class="fa fa-facebook"></span></a>
+                <a href="#" title=""><span class="fa fa-twitter"></span></a>
+                <a href="#" title=""><span class="fa fa-instagram"></span></a>
+                <a href="#" title=""><span class="fa fa-pinterest"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-collapse"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="{{ url_for('static', filename='images/የቤት.png') }}"
+              alt="የቤት.png"
+            />
+          </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="Maids.html">Maids</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="registration.html">Register</a></li>
+            <li><a href="Login.html">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNER ROTATOR -->
+    <div
+      class="section subbanner"
+      style="background: url('{{ url_for('static', filename='images/service.jpg') }}');" no-repeat center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      "
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="caption">
+              <h3>About Us</h3>
+              <ol class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">About Us</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT SECTION -->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12">
+            <div class="page-title">
+              <h2 class="lead">WELCOME TO ETmaids</h2>
+              <p class="sublead">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="about-img">
+              <img
+                src="{{ url_for('static', filename='images/banner.jpg') }}"
+                alt="banner"
+              />
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="about-wrap">
+              <h4 class="title-page">OUR HISTORY</h4>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+                mollitia, molestiae quas vel sint commodi repudiandae
+                consequuntur voluptatum laborum numquam blanditiis harum
+                quisquam eius sed odit fugiat iusto fuga praesentium optio,
+                eaque rerum! Provident similique accusantium nemo autem.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae ab illo inventore veritatis et quasi architecto beatae
+                vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia
+                voluptas sit aspernatur aut odit aut fugit, sed quia
+                consequuntur magni dolores eos qui ratione voluptatem sequi
+                nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem. Ut enim ad minima veniam, quis nostrum
+                exercitationem ullam corporis suscipit laboriosam, nisi ut
+                aliquid ex ea commodi consequatur? Quis autem vel eum iure
+                reprehenderit qui in ea voluptate velit esse quam nihil
+                molestiae consequatur, vel illum qui dolorem eum fugiat quo
+                voluptas nulla pariatur?
+              </p>
+            </div>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="why-item-wrap">
+            <div class="col-xs-12 col-md-4">
+              <div class="why-item">
+                <div class="icon">
+                  <div class="fa fa-paper-plane-o"></div>
+                </div>
+                <div class="ket">
+                  <h4>OUR VISION</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="why-item">
+                <div class="icon">
+                  <div class="fa fa-crosshairs"></div>
+                </div>
+                <div class="ket">
+                  <h4>OUR MISSION</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+              <div class="why-item">
+                <div class="icon">
+                  <div class="fa fa-leaf"></div>
+                </div>
+                <div class="ket">
+                  <h4>OUR STRENGTHS</h4>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+    <div class="footer">
+      <div class="f-desc">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="footer-item">
+                <div class="footer-logo">
+                  <img
+                    src="{{ url_for('static', filename='images/የቤት.png') }}"
+                    alt="የቤት.png"
+                  />
+                </div>
+                <p>
+                  FindMaid is your ultimate destination for effortlessly finding
+                  reliable and experienced home maids. Whether you need a
+                  helping hand with daily chores, cleaning, cooking, or
+                  childcare, our user-friendly web application connects you with
+                  the perfect maid to meet your household needs.
+                </p>
+                <div class="footer-sosmed">
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-facebook"></i>
+                    </div>
+                  </a>
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-twitter"></i>
+                    </div>
+                  </a>
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-pinterest"></i>
+                    </div>
+                  </a>
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-google"></i>
+                    </div>
+                  </a>
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-instagram"></i>
+                    </div>
+                  </a>
+                  <a href="#" title="">
+                    <div class="item">
+                      <i class="fa fa-linkedin"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="footer-item">
+                <div class="footer-title">
+                  <h4>Description (ስለ ሰራተኞቹ)</h4>
+                </div>
+                <div class="footer-blog-item">
+                  <div class="footer-blog-lead">
+                    <a href="blog-1.html" title=""
+                      >Description about Live out Maids(ተመላላሽ ሰራተኛ)</a
+                    >
+                  </div>
+                  <div class="footer-blog-date"></div>
+                </div>
+                <div class="footer-blog-item">
+                  <div class="footer-blog-lead">
+                    <a href="blog-1.html" title=""
+                      >Description about Live in Maids(ቋሚ ሰራተኛ)</a
+                    >
+                  </div>
+                  <div class="footer-blog-date"></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="footer-item">
+                <div class="footer-title">
+                  <h4>NEWSLETTER</h4>
+                </div>
+                <div class="footer-form">
+                  <form action="#">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <button type="submit" class="btn btn-default">
+                        SEND
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+              <div class="footer-item">
+                <div class="footer-title">
+                  <h4>GET IN TOUCH</h4>
+                </div>
+                <div class="footer-getintouch">
+                  <div class="footer-getintouch-item">
+                    <div class="icon">
+                      <b class="fa fa-phone"></b>
+                    </div>
+                    <div class="desc">
+                      <div class="desc-1">Phone</div>
+                      <div class="desc-2">:</div>
+                      <div class="desc-3">
+                        +251 91100...... <br />+251 71100....
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-getintouch-item">
+                    <div class="icon">
+                      <b class="fa fa-envelope"></b>
+                    </div>
+                    <div class="desc">
+                      <div class="desc-1">Email</div>
+                      <div class="desc-2">:</div>
+                      <div class="desc-3">
+                        <a href="mailto:support@laundryes.com" title=""
+                          >ETmaids@gmail.com</a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-getintouch-item">
+                    <div class="icon">
+                      <b class="fa fa-globe"></b>
+                    </div>
+                    <div class="desc">
+                      <div class="desc-1">Website</div>
+                      <div class="desc-2">:</div>
+                      <div class="desc-3">www.etmaids.com</div>
+                    </div>
+                  </div>
+                  <div class="footer-getintouch-item">
+                    <div class="icon">
+                      <b class="fa fa-map-marker"></b>
+                    </div>
+                    <div class="desc">
+                      <div class="desc-1">Address</div>
+                      <div class="desc-2">:</div>
+                      <div class="desc-3">Addis Ababa <br />ETHIOPIA</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fcopy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <p class="ftex">
+                &copy; 2023 ETmaids by Bereket,Melaku & Hiwot - All Rights
+                Reserved
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script
+      type="text/javascript"
+      src="https://maps.google.com/maps/api/js?sensor=false&amp;ver=4.1.5"
+    ></script>
+    <script type="text/javascript" src="js/jqBootstrapValidation.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/bootstrap-hover-dropdown.min.js') }}"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="{{ url_for('static', filename='js/script.js') }}"
+    ></script>
+  </body>
+
+  <!-- Mirrored from html.rudhisasmito.com/laundryes/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Aug 2023 21:20:35 GMT -->
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <style>
+        /* CSS styles here */
+
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], select {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+        }
+        .profile-picture-preview {
+            max-width: 150px;
+            max-height: 150px;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar-collapse collapse" style="margin-right: 225px;font-size:large;border: #333;">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+
+            </li>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>Maids Profile Form</h1>
+        <form id="profileForm" method="post" action="{{ url_for('profile_register') }}" enctype="multipart/form-data">
+            <label for="name">Name/ሙሉ ስም/:</label>
+            <input type="text" id="name" name="username" placeholder="Marta Abebe">
+            <span class="error" id="nameError"></span>
+
+            <label for="age">Age/እድሜ/:</label>
+            <input type="number" id="age" name="age" placeholder="30">
+            <span class="error" id="ageError"></span>
+
+            <label for="religion">Religion/ሀይማኖት/:</label>
+            <input type="text" id="religion" name="religion" placeholder="Christian, Orthodox, Muslim ...etc.">
+            <span class="error" id="religionError"></span>
+
+            <label for="residence">Residence/ተመላላሽ ወይም ቋሚ/:</label>
+            <input type="text" id="residence" name="residence" placeholder="Addis Ababa, Hawassa, Dire Dawa">
+            <span class="error" id="residenceError"></span>
+
+            <label for="experience">Experience/የስራ ልምድ/:</label>
+            <input type="text" id="experience" name="experience" placeholder="5 years">
+            <span class="error" id="experienceError"></span>
+
+            <label for="salary">Expected Salary/የሚፈለገው የደምወዝ መጠን/:</label>
+            <input type="text" id="salary" name="salary" placeholder="2000Br-3500Br">
+            <span class="error" id="salaryError"></span>
+
+            <!--label for="children">Children/ስንት ልጅ አሎት/:</label>
+            <input type="text" id="children" name="children" placeholder="2">
+            <span class="error" id="childrenError"></span-->
+
+             <!-- Profile picture upload -->
+             <label for="profilePicture">Profile Picture/ፎቶዎን ያስገቡ/:</label>
+             <input type="file" id="profilePicture" name="photo" accept="image/*">
+             <!--span class="error" id="profilePictureError"></span-->
+ 
+             <!-- ... (other fields) ... -->
+             <div class="msg">
+                <p> {{ msg }}</p>
+               </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!--script>
+        // JavaScript for form validation and profile picture preview
+        const profilePictureInput = document.getElementById("profilePicture");
+        const profilePicturePreview = document.getElementById("profilePicturePreview");
+
+        profilePictureInput.addEventListener("change", function() {
+            const file = this.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    profilePicturePreview.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                profilePicturePreview.src = ""; // Clear the preview if no file selected
+            }
+        });
+        // JavaScript for form validation and submission
+        document.getElementById("profileForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Validation logic (you can expand this as needed)
+            const name = document.getElementById("name").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const religion = document.getElementById("religion").value.trim();
+            const residence = document.getElementById("residence").value.trim();
+            const experience = document.getElementById("experience").value.trim();
+            const salary = document.getElementById("salary").value.trim();
+
+            // Reset error messages
+            document.querySelectorAll(".error").forEach(function(error) {
+                error.textContent = "";
+            });
+
+            // Validation checks (you can add more checks)
+            if (name === "") {
+                document.getElementById("nameError").textContent = "Name is required";
+                return;
+            }
+
+            if (age === "") {
+                document.getElementById("ageError").textContent = "Age is required";
+                return;
+            }
+
+            if (religion === "") {
+                document.getElementById("religionError").textContent = "Religion is required";
+                return;
+            }
+
+            // ... Add more validation checks for other fields ...
+
+            // If all validation passes, you can proceed with form submission
+            // You can send the form data to a server using AJAX here
+
+            // For demonstration purposes, we'll just display the data
+            alert("Profile Submitted:\nName: " + name + "\nAge: " + age + "\nReligion: " + religion + "\nResidence: " + residence + "\nExperience: " + experience + "\nSalary: " + salary);
+        });
+    </script-->
+</body>
+</html>

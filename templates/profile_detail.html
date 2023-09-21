@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <div class="photo_display" style="padding: 10px;">
+                <img src="{{ url_for('static', filename='uploads/' + account['photo']) }}" style="height:70px; width:70px; border-radius: 50%;">
+            </div>
+            <div class="maid-name">{{ account['First_Name'] }} {{ account['Last_Name'] }}</div>
+        </div>
+        <div class="profile-info">
+            <!-- Display other profile information dynamically here -->
+            <p><strong>Age:</strong>{{ account['First_Name'] }} {{ account['Last_Name'] }}</p>
+            <p><strong>Age:</strong> {{ account['age'] }}</p>
+            <p><strong>Residence:</strong> {{ account['residence'] }}</p>
+            <p><strong>Religion:</strong> {{ account['religion'] }}</p>
+            <p><strong>Experience:</strong>{{ account['experience'] }}</p>
+            <p><strong>Age:</strong> {{ account['wcondition'] }}</p>
+            <p><strong>Expected Salary:</strong> {{ account['salary'] }}</p>
+            <!--Add more profile information as needed-->
+        </div-->
+        <button class="choose-maid-button" ><a href="{{ url_for('home') }}">Back To Home</a></button>
+    </div>
+    </div>
+</body>

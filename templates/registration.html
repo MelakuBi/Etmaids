@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maids Finder Registration</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style2.css') }}"
+    />
+  </head>
+  <body>
+    <div class="background-image"></div>
+    <div class="registration-container">
+      <div class="registration-form">
+        <h2>Registration</h2>
+      <form id="registration-form" method="post" action="{{ url_for('registration', msg=msg) }}" enctype="multipart/form-data">
+          <div class="form-group">
+            <input
+              type="radio"
+              id="employee"
+              name="user-type"
+              value="employee"
+              checked
+            />
+            <label for="employee">Employee</label>
+            <input
+              type="radio"
+              id="employer"
+              name="user-type"
+              value="employer"
+            />
+            <label for="employer">Employer</label>
+            <input type="radio" id="agent" name="user-type" value="agent" />
+            <label for="agent">Agent</label>
+            <p id="user-type-error" class="error-message"></p>
+          </div>
+          <div class="form-group">
+            <input type="radio" id="employee" name="user-type" value="employee" checked>
+            <p id="user-type-error" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <input type="text" name="fname" id="first-name" placeholder="First Name">
+            <p id="first-name-error" class="error-message"></p>
+            <input type="text" name="lname" id="last-name" placeholder="Last Name">
+            <p id="last-name-error" class="error-message"></p>
+        </div>
+        <div class="form-group">
+          <input type="text" name="username" id="user-name" placeholder="User Name">
+          <p id="user-name-error" class="error-message"></p>
+      </div>
+        <div class="form-group">
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+            <p id="phone-error" class="error-message"></p>
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <p id="password-error" class="error-message"></p>
+            <input type="password" id="confirm-password" placeholder="Confirm Password">
+            <p id="confirm-password-error" class="error-message"></p>
+        </div>
+        <input type="submit" value="Submit">
+        <p id="error-message" class="error-message"></p>
+        <!--div> {{ msg }}</div-->
+    </form>
+     <div class="msg">
+         <script> setTimeout(function(msg){$(msg).fadeOut();}, 15000);</script>
+          </div>
+        <div class="actions">
+          <a href="#" id="forgot-password">Forgot Password?</a>
+          <span
+            >Already have an account?
+            <a href="Login.html" id="sign-in">Sign In</a></span
+          >
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+  </body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  
+<!-- Mirrored from html.rudhisasmito.com/laundryes/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Aug 2023 21:20:16 GMT -->
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+	
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ETmaids Finder</title>
+    <meta name="description" content="Laundryes - Laundry Business Html Template. It is built using bootstrap 3.3.2 framework, works totally responsive, easy to customise, well commented codes and seo friendly.">
+    <meta name="keywords" content="laundry, multipage, business, clean, bootstrap">
+    <meta name="author" content="rudhisasmito.com"> 
+	
+	<!-- ==============================================
+	Favicons
+	=============================================== -->
+	
+	
+	<!-- ==============================================
+	CSS
+	=============================================== -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+	
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}">
+	<img src="{{ url_for('static', filename='images/የቤት.png') }}" alt="የቤት Image">
+	<link rel="icon" type="image/logo" href="images/የቤት.png">
+	
+	
+	
+	<!-- ==============================================
+	Google Fonts
+	=============================================== -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,900' rel='stylesheet' type='text/css'>
+	
+	
+	<!-- Custom Stylesheet -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		
+    <script src="{{ url_for('static', filename='js/modernizr.min.js') }}"></script>
+	<style> 
+        .db-social .head-profile {
+            margin-top: -120px;
+            border-radius: 4px;
+        }
+
+        .db-social .head-profile:before {
+            content: "";
+            background: rgba(255, 255, 255, .6);
+            height: 20px;
+            width: 90%;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .db-social .head-profile:after {
+            content: "";
+            background: rgba(255, 255, 255, .3);
+            height: 20px;
+            width: 80%;
+            position: absolute;
+            top: -40px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            border-radius: 4px 4px 0 0;
+        }
+
+        .db-social .image-default img {
+            width: 120px;
+            position: absolute;
+            top: -80px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            box-shadow: 0 0 0 6px rgba(255, 255, 255, 1);
+            z-index: 10;
+        }
+
+        .db-social .infos {
+            text-align: center;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            line-height: 1.8rem;
+        }
+
+        .db-social h2 {
+            color: #2c304d;
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-bottom: .2rem;
+        }
+
+        .db-social .location {
+            color: #aea9c3;
+            font-size: 1rem;
+        }
+
+        .db-social .follow .btn {
+            padding: 10px 30px;
+        }
+
+        .db-social .head-profile .actions {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: .5rem;
+        }
+
+        .db-social .head-profile li:first-child {
+            padding-left: 0;
+        }
+
+        .db-social .head-profile li {
+            display: inline-block;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .db-social .head-profile li .counter {
+            color: #2c304d;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .db-social .head-profile li .heading {
+            color: #aea9c3;
+            font-size: 1rem;
+        }
+		
+    </style>
+	{% block head %}
+	{% endblock %}
+	
+</head>
+
+<body> 
+	<!-- Load page -->
+	<div class="animationload">
+		<div class="loader"></div>
+	</div>
+	
+	
+	<!-- NAVBAR SECTION -->
+	<div class="navbar navbar-main navbar-fixed-top">  
+		<div class="header-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
+						<div class="info">
+							<div class="info-item">
+								<span class="fa fa-phone"></span> Phone +251 911000000
+							</div>
+							<div class="info-item">
+								<span class="fa fa-envelope-o"></span> <a href="mailto:info@maids.com" title="">Email ETmaids@gmail.com</a>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+						<div class="top-sosmed pull-right">
+							<a href="#" title=""><span class="fa fa-facebook"></span></a>
+							<a href="#" title=""><span class="fa fa-twitter"></span></a>
+							<a href="#" title=""><span class="fa fa-instagram"></span></a>
+							<a href="#" title=""><span class="fa fa-pinterest"></span></a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="index.html"><img src="{{ url_for('static', filename='images/የቤት.png') }}" alt="የቤት.png">
+</a>
+
+
+			</div>
+			<div class="navbar-collapse collapse"> {% block navbar %}
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+
+					</li>
+					<li><a href="{{ url_for('index') }}">Home</a></li>
+					<li><a href="about.html">about</a></li>
+					<li><a href="Maids.html">Maids</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
+					<li> <a href="{{ url_for('registration') }}">Register</a></li>
+					<li><a href="{{ url_for('Login') }}">Login</a></li>
+					
+				</ul>
+				{% endblock %}
+			</div>
+		</div>
+    </div>
+
+ 
+	<!-- BANNER -->
+	<div class="section banner" >
+		<div class="container pos-relative">
+			<div class="caption">
+				<div class="title-box">
+					<h2>MAID FINDING MADE EASY</h2>
+				</div>
+				<p>ባሉበት ሆነው የቤት ሰራተኛ በቀላሉ ያግኙ!!!</p>
+				<a href="#" title="" class="btn btn-default">LEARN MORE</a>
+			</div>
+		</div>
+		<div class="imgbg" style="background:url('/static/images/R.jpg')" no-repeat center center;   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover>
+			<img src="{{ url_for('static', filename='images/R.jpg') }}" alt="services-img-2">
+		</div>
+		<div class="work-info">
+			<div class="container">
+
+
+				</div>
+		
+				</div>
+				{% block banner %} 
+			{% endblock %}
+			</div>
+		
+	
+	
+	<!-- ABOUT SECTION -->
+	<div class="section about">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="page-title">
+						<h2 class="lead">WHY CHOOSE US?</h2>
+						<p class="sublead">We understand the importance of your bottom line. Our solution is cost-effective, offering a high return on investment and helping you save both time and money.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+			
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="why-item">
+
+						<div class="ket">
+							<h4>Trustworthy Matchmaking</h4>
+							<p>We take pride in our rigorous vetting process. Every domestic helper on our platform undergoes thorough background checks, ensuring they are trustworthy and reliable.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="why-item">
+
+						<div class="ket">
+							<h4>Convenience</h4>
+							<p>Our user-friendly platform allows you to browse profiles, schedule interviews, and manage bookings at your convenience, all from the comfort of your home.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+					<div class="why-item">
+
+						<div class="ket">
+							<h4>Long-Term Relationships</h4>
+							<p>We aim to foster long-lasting relationships between households and domestic helpers. Our goal is to see your home thrive with the help of a trusted professional.</p>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+		{% block about %} 
+	{% endblock %}
+	</div>
+
+	
+	<!-- SERVICES SECTION -->
+	<div class="section services">{% block service %} 
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="page-title">
+						<h2 class="lead">Available Maids</h2>
+						<p class="sublead">ALL OF OUR LISTED MAIDS ARE IN ETHIOPIA AND WAITING FOR YOU TO CONTACT THEM.</p>
+					</div>
+				</div>
+			</div>
+			
+			<section class="service-section" id="service-section">
+				<div class="container">
+					<div class="row">
+						
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="row">
+								{% for maids in msg %}
+									
+								<div class="db-social col-md-3 col-sm-6 mb-5">
+									<div class="product-img border-top border-left border-right infos">
+										<img src="{{ url_for('static', filename='uploads/'+maids['photo']) }}" alt="maids image.jpg" style="height:80px;width:80px;">
+										<div class="product-img-overlay">
+										</div>
+									</div>
+									<div class="mt-0 infos h-50 border-bottom border-left border-right p-3">
+										<h4>  {{ maids['First_Name'] }} {{ maids['Last_Name'] }}</h4>
+										<div class="location"> {{ maids['age']}}
+										</div>
+										<div class="location"> {{ maids['residence'] }}</div>
+										<div class="location"> {{ maids['salary'] }}</div>
+										<div class="location">
+											<a href="{{ url_for('detail_view', id=maids['id']) }}']" class="btn btn-getstart btn-success mt-2 mr-2">View Profile</a>
+										</div>
+									</div>
+								</div>
+								{%endfor%}
+								
+								
+							</div>
+						</div>
+					</div>
+		
+		
+					<div class="slider_btn row d-flex justify-content-center">
+		
+						<a href="Maids.html" class="slider_btn_one more-link" class="btn btn-getstart btn-success mt-2 mr-2"> Find More Employees</a>
+		
+					</div>
+				</div>
+			</section>
+			</div>
+			
+		</div>
+	{% endblock %}
+	</div>
+		
+	<!-- STATS SECTION FACTS --> 
+	
+	
+	
+   
+
+	<!-- TESTIMONIALS SECTION -->
+	<div class="section testimonials">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-sm-12 col-md-12">
+					<div class="page-title">
+						<h2 class="lead">TESTIMONIALS</h2>
+						<p class="sublead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				
+				<div class="col-sm-12 col-md-6">
+					<div class="testimonials-item">
+						<div class="people">
+							<img src="{{ url_for('static', filename='images/testimony.jpg') }}" alt="testimony.jpg" class="img-circle" />
+							<h3>John Deol</h3>
+						</div>
+						<div class="quote-box">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-12 col-md-6">
+					<div class="testimonials-item">
+						<div class="people">
+							<img src="{{ url_for('static', filename='images/testimony.jpg') }}" alt="testimony.jpg" class="img-circle" />
+							<h3>Sonny Deol</h3>
+						</div>
+						<div class="quote-box">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-12 col-md-6">
+					<div class="testimonials-item">
+						<div class="people">
+							<img src="{{ url_for('static', filename='images/testimony.jpg') }}" alt="testimony.jpg" class="img-circle" />
+							<h3>Jenny Deol</h3>
+						</div>
+						<div class="quote-box">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-sm-12 col-md-6">
+					<div class="testimonials-item">
+						<div class="people">
+							<img src="{{ url_for('static', filename='images/testimony.jpg') }}" alt="testimony.jpg" class="img-circle" />
+							<h3>Rambo Deol</h3>
+						</div>
+						<div class="quote-box">
+							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+ 
+	<!-- FOOTER SECTION -->
+	<div class="footer">
+	
+		<div class="f-desc">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-logo">
+								<img src="{{ url_for('static', filename='images/የቤት.png') }}" alt="የቤት.png">
+
+							</div>
+							<p>FindMaid is your ultimate destination for effortlessly finding reliable and experienced home maids. Whether you need a helping hand with daily chores, cleaning, cooking, or childcare, our user-friendly web application connects you with the perfect maid to meet your household needs. </p>
+							<div class="footer-sosmed">
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-facebook"></i>
+									</div>
+								</a>
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-twitter"></i>
+									</div>
+								</a>
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-pinterest"></i>
+									</div>
+								</a>
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-google"></i>
+									</div>
+								</a>
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-instagram"></i>
+									</div>
+								</a>
+								<a href="#" title="">
+									<div class="item">
+										<i class="fa fa-linkedin"></i>
+									</div>
+								</a> 
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								<h4>Description (ስለ ሰራተኞቹ)</h4>
+							</div>
+							<div class="footer-blog-item">
+								<div class="footer-blog-lead">
+									<a href="blog-1.html" title="">Description about Live out Maids(ተመላላሽ ሰራተኛ)</a>
+								</div>
+								<div class="footer-blog-date">
+							
+								</div>
+							</div>
+							<div class="footer-blog-item">
+								<div class="footer-blog-lead">
+									<a href="blog-1.html" title="">Description about Live in Maids(ቋሚ ሰራተኛ)</a>
+								</div>
+								<div class="footer-blog-date">
+							
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								<h4>NEWSLETTER</h4>
+							</div>
+							<div class="footer-form">
+								<form action="#">
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Name">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Email">
+									</div>
+									<div class="form-group">
+										<button type="submit" class="btn btn-default">SEND</button>
+									</div>
+									
+								</form>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+						<div class="footer-item">
+							<div class="footer-title">
+								<h4>GET IN TOUCH</h4>
+							</div>
+							<div class="footer-getintouch">
+								<div class="footer-getintouch-item">
+									<div class="icon">
+										<b class="fa fa-phone"></b>
+									</div>
+									<div class="desc">
+										<div class="desc-1">Phone</div>
+										<div class="desc-2">:</div>
+										<div class="desc-3">+251 91100...... <br />+251 71100....</div>
+									</div>
+								</div>
+								<div class="footer-getintouch-item">
+									<div class="icon">
+										<b class="fa fa-envelope "></b>
+									</div>
+									<div class="desc">
+										<div class="desc-1">Email</div>
+										<div class="desc-2">:</div>
+										<div class="desc-3"><a href="mailto:support@laundryes.com" title="">ETmaids@gmail.com</a></div>
+									</div>
+								</div>
+								<div class="footer-getintouch-item">
+									<div class="icon">
+										<b class="fa fa-globe"></b>
+									</div>
+									<div class="desc">
+										<div class="desc-1">Website </div>
+										<div class="desc-2">:</div>
+										<div class="desc-3">www.etmaids.com</div>
+									</div>
+								</div>
+								<div class="footer-getintouch-item">
+									<div class="icon">
+										<b class="fa fa-map-marker"></b>
+									</div>
+									<div class="desc">
+										<div class="desc-1">Address </div>
+										<div class="desc-2">:</div>
+										<div class="desc-3">Addis Ababa <br />ETHIOPIA</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+				
+		</div>
+		
+		<div class="fcopy">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<p class="ftex">&copy; 2023 ETmaids by Bereket,Melaku & Hiwot - All Rights Reserved</p> 
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	
+	
+	
+	
+	<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+	<script type='text/javascript' src='https://maps.google.com/maps/api/js?sensor=false&amp;ver=4.1.5'></script>
+	<script type= "text/javascript" src="{{ url_for('static', filename='js/jqBootstrapValidation.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+	<script type= "text/javascript" src="{{ url_for('static', filename='js/bootstrap-hover-dropdown.min.js') }}"></script>
+	
+	<script type= "text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+	{% block footer %} 
+	{% endblock %}
+	</div>
+</body>
+
+<!-- Mirrored from html.rudhisasmito.com/laundryes/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Aug 2023 21:20:16 GMT -->
+</html>
